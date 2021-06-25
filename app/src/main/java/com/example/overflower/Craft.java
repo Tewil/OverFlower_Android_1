@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -19,6 +21,7 @@ public class Craft extends AppCompatActivity {
     private SeekBar seekBar2;
     private TextView textView3;
     private SeekBar seekBar3;
+    private Button button1;
 
 
     @Override
@@ -54,6 +57,15 @@ public class Craft extends AppCompatActivity {
 
         textView1 = (TextView) findViewById(R.id.textView1);
         seekBar1 = (SeekBar) findViewById(R.id.seekBar1);
+        button1 = (Button) findViewById(R.id.button1);
+
+        button1.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                textView1.setText("Worked");
+            }
+        });
 
         seekBar1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
